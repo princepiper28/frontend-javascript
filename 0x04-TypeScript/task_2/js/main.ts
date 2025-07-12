@@ -65,3 +65,19 @@ function executeWork(employee: Director | Teacher): string {
 // Testing the new functions
 console.log(executeWork(createEmployee(200)));   // Getting to work
 console.log(executeWork(createEmployee(1000)));  // Getting to director tasks
+
+// Define allowed Subjects
+type Subjects = 'Math' | 'History';
+
+// Define teachClass function
+function teachClass(todayClass: Subjects): string {
+  if (todayClass === 'Math') {
+    return 'Teaching Math';
+  } else {
+    return 'Teaching History';
+  }
+}
+
+// Example usage:
+console.log(teachClass('Math'));     // Teaching Math
+console.log(teachClass('History'));  // Teaching History
